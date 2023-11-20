@@ -1740,17 +1740,13 @@ int CleanEnv()
  
 int main(int argc, char ** argv)
 {
-    if (argc<2)
-    {
-        printf("Missing argument\n");
-        help(0x00);
-    }
-    else if (strcmp(argv[1],"poll") == 0)
+    if (argc == 1)
     {
         cmd_poll(argc - 2, &argv[2]);
     }
     else
     {
+        printf("Invalid parameter..\n");
         help(0x00);
     }
     printf("\n");
