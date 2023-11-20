@@ -1741,8 +1741,11 @@ int CleanEnv()
 int main(int argc, char ** argv)
 {
     if (argc == 1)
-    {
-        cmd_poll(argc - 2, &argv[2]);
+    {   
+        while(1){
+            cmd_poll(argc - 2, &argv[2]);
+            sleep(5);
+        }
     }
     else
     {
